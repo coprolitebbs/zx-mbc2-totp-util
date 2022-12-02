@@ -17,7 +17,7 @@ Realise utility to generate SHA1 TOTP
     - Скачать и установить ZXCC (стандартными средствами ./configure / make / make install),
     - Клонировать из репозитория компилятор Hi-Tech C:
 	```
-	# https://github.com/agn453/HI-TECH-Z80-C.git
+	# git clone https://github.com/agn453/HI-TECH-Z80-C.git
 	```
     - Перейти в директорию HI-TECH-Z80-C/dist и выполнить команду преобразования всех имен файлов внутри в нижний регистр, иначе zxcc просто ничего не увидит
 	``` 
