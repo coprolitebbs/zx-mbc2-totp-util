@@ -65,4 +65,6 @@ Realise utility to generate SHA1 TOTP
 Эмулятор среды CP-M в Linux для запуска компилятора Hi-Tech C и тестирования проекта
 * https://github.com/agn453/ZXCC
 
+Эмулятор Z80-MBC2 на Linux и Windows. Собирается через Cargo.
+* https://github.com/ivanizag/z80-mbc2-emu
 
