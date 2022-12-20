@@ -73,6 +73,8 @@ union test_u {
 
 
 
+
+
 void init(void);
 uint32_t rol32(uint32_t number, uint8_t bits);
 void hashBlock();
@@ -264,6 +266,8 @@ char* getCode(uint8_t* hmacKey, int keyLength, long_type steps) {
 	int j;
 	_hmacKey = hmacKey;
 	_keyLength = keyLength;
+  
+  
   /* STEP 0, map the number of steps in a 8-bytes array (counter value) */
 	_byteArray[0] = 0x00;
 	_byteArray[1] = 0x00;
@@ -313,6 +317,11 @@ char* getCode(uint8_t* hmacKey, int keyLength, long_type steps) {
 uint8_t decode_base32(uint8_t* key){    
   size_t pos;
   size_t keylen = 0;
+  /*
+  size_t i;
+  
+  size_t ms = strlen((char *)key);
+  */
 
   for(pos = 0; pos <= (strlen((char *)key) - 8); pos += 8){
       /* MSB is Most Significant Bits  (0x80 == 10000000 ~= MSB)
@@ -350,6 +359,7 @@ uint8_t decode_base32(uint8_t* key){
       keylen += 5;
    };
    key[keylen] = 0;
-  /* returns length of key, not length of key array */
+  
+   /* returns length of key, not length of key array */
    return keylen;
 }
